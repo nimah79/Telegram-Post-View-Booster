@@ -38,8 +38,6 @@ foreach ($proxies as $proxy) {
         echo 'bad proxy'.PHP_EOL;
         curl_close($ch);
         continue;
-    } else {
-        file_put_contents($proxies_file, $proxy."\n", FILE_APPEND);
     }
 
     preg_match('/data-view="(\w+)"/', $result, $matches);
